@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Monkey : MonoBehaviour
 {
-
     [SerializeField] private string _name = "Player";
     [SerializeField] private float _moveSpeed = 1.3f;
     [SerializeField] private int _collectedBananas = 0;
@@ -14,7 +13,8 @@ public class Monkey : MonoBehaviour
 
     private Rigidbody _rigidbody;
 
-    void Start()
+
+    private void Start()
     {
         Debug.Log("Monkey's name: " + _name);
         Debug.Log("Monkey's speed: " + _moveSpeed);
@@ -29,8 +29,7 @@ public class Monkey : MonoBehaviour
     }
 
 
-
-    void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.TryGetComponent(out Floor floor))
         {
