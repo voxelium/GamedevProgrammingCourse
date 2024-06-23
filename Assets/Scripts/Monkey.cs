@@ -24,13 +24,15 @@ public class Monkey : MonoBehaviour
         Debug.Log("Monkey's jump speed: " + _jumpSpeed);
 
         _rigidbody = GetComponent<Rigidbody>();
+
+        transform.localScale *= _size;
     }
 
 
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Floor"))
+        if (other.gameObject.TryGetComponent(out Floor floor))
         {
             Vector3 jumpVelocity = new Vector3(0f, _jumpSpeed, 0);
             _rigidbody.velocity = jumpVelocity;
