@@ -10,10 +10,10 @@ public class ItemHolder : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Имя предмета: " + _item.Name + "\nСтоимость предмета: " + _item.price);
-        Debug.Log("Шанс выпадения предмета: " + _item.dropChance);
+        Debug.Log("Имя предмета: " + _item.Name + "\nСтоимость предмета: " + _item.Price);
+        Debug.Log("Шанс выпадения предмета: " + _item.DropChance);
 
-        _spriteRenderer.sprite = _item.sprite;
+        _spriteRenderer.sprite = _item.Sprite;
     }
 
 

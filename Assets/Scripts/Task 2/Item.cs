@@ -1,20 +1,21 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
     //Имя предмета
-    public String Name = "Skoropeya";
+    [SerializeField] private String _name = "ItemShop";
+    public String Name => _name;
 
     //Стоимость предмета
-    public float price = 115f;
+    [SerializeField] private float _price = 115f;
+    public float Price => _price;
 
     //Иконка предмета
-    public Sprite sprite;
+    [SerializeField] private Sprite _sprite;
+    public Sprite Sprite => _sprite;
 
     //Редкость предмета (шанс выпадения)
-    public float dropChance = 10f;
-
+    [SerializeField] private float _dropChance = 10f;
+    public float DropChance => _dropChance;
 }
